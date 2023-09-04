@@ -1,6 +1,7 @@
 # IceCube---Neutrinos-in-Deep-Ice
 
-Dataset Description
+#Dataset Description
+
 The goal of this competition is to identify which direction neutrinos detected by the IceCube neutrino observatory came from. When detection events can be localized quickly enough, traditional telescopes are recruited to investigate short-lived neutrino sources such as supernovae or gamma ray bursts. Because the sky is huge better localization will not only associate neutrinos with sources but also to help partner observatories limit their search space. With an average of three thousand events per second to process, it's difficult to keep up with the stream of data using traditional methods. Your challenge in this competition is to quickly and accurately process a large number of events.
 
 This competition uses a hidden test set. When your submitted notebook is scored the actual test data (including a full length sample submission) will be made available to your notebook. Expect to see roughly one million events in the hidden test set, split between multiple batches.ataset Description
@@ -8,7 +9,8 @@ The goal of this competition is to identify which direction neutrinos detected b
 
 This competition uses a hidden test set. When your submitted notebook is scored the actual test data (including a full length sample submission) will be made available to your notebook. Expect to see roughly one million events in the hidden test set, split between multiple batches.
 
-Files
+#Files
+
 [train/test]_meta.parquet
 
 batch_id (int): the ID of the batch the event was placed into.
@@ -31,6 +33,7 @@ x = cos(azimuth) * sin(zenith)
 y = sin(azimuth) * sin(zenith)
 z = cos(zenith)
 
-Example Event
+#Example Event
+
 The following image shows a visual representation of the features of an IceCube event in the dataset. The colorful dots represent sensors that logged at least one pulse in the event. The size of the dots corresponds to the total charge of all pulses while the color indicates the time of the first pulse.
 The left panel shows only pulses with auxiliary==False, and the right panel with auxiliary==True. The small, gray points indicate the positions of all 5160 IceCube sensors. The red arrow shows the true neutrino direction of that event, i.e. the regression target.
